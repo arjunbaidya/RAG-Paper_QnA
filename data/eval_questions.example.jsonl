@@ -1,0 +1,36 @@
+// 30 retrieval eval questions on data poisoning and backdoor detection.
+// Written against the papers in data/eval_papers.txt; download them with:
+//   python fetch_papers.py --ids-file data/eval_papers.txt
+// Then: cp data/eval_questions.example.jsonl data/eval_questions.jsonl && python eval.py
+// Questions paraphrase each method instead of naming it, so retrieval has to match meaning, not title words.
+// "source" may be a list when several papers are a correct answer.
+{"question": "Which defense flags poisoned training examples by projecting learned representations onto the top singular vector of their covariance and removing outliers?", "source": "1811.00636"}
+{"question": "How can poisoned samples be separated from clean ones by clustering the last hidden layer activations of each class into two groups?", "source": "1811.03728"}
+{"question": "Which runtime defense superimposes other images onto an incoming input and treats unusually low prediction entropy as a sign of a trojan trigger?", "source": "1902.06531"}
+{"question": "How does whitening features with robustly estimated mean and covariance, followed by quantum entropy outlier scoring, help remove poisoned samples?", "source": "2104.11315"}
+{"question": "Which method exploits the fact that models learn backdoor examples faster than clean ones, isolating low-loss examples early in training and later unlearning them?", "source": "2110.11571"}
+{"question": "Which defense first learns a feature extractor with self-supervised learning and then trains only the classification layers on top of the frozen features?", "source": "2202.03423"}
+{"question": "Why can pruning dormant neurons alone be bypassed by a pruning-aware attacker, and what does adding fine-tuning contribute?", "source": "1805.12185"}
+{"question": "How can one upper-bound the worst-case test loss an attacker can cause against a defense that removes outliers before training?", "source": "1706.03691"}
+{"question": "Which defense removes clean-label poisons when a training point's nearest neighbors in feature space mostly carry a different label?", "source": "1909.13374"}
+{"question": "What do common backdoor triggers look like in the frequency domain, and how can their high-frequency artifacts be used to detect poisoned inputs?", "source": "2104.03413"}
+{"question": "Can aggressive data augmentations such as mixup and CutMix weaken poisoning and backdoor attacks without reducing clean accuracy?", "source": "2011.09527"}
+{"question": "Which poisoned-sample detection method is designed to work across supervised, self-supervised and transfer learning by actively inducing different behavior on clean and poisoned data?", "source": "2302.11408"}
+{"question": "How can a backdoor be erased by fine-tuning on a small clean set while aligning the student's intermediate attention maps with a teacher's?", "source": "2101.05930"}
+{"question": "Which defense adversarially perturbs neurons and prunes the ones whose perturbation most easily triggers the backdoor behavior?", "source": "2110.14430"}
+{"question": "How can a black-box, label-only detector flag trigger-carrying test inputs by amplifying their pixel values and checking whether the predicted label stays stable?", "source": "2302.03251"}
+{"question": "Which method learns a minimal input mask that preserves the model's output in order to expose the small pattern a backdoored model relies on?", "source": "2301.10908"}
+{"question": "How can localized universal attacks such as adversarial patches be detected by combining model interpretability with object detection techniques?", "source": "1812.00292"}
+{"question": "In an outsourced training scenario, how can an adversary deliver a model that performs well on clean data but misclassifies street signs carrying a small sticker?", "source": "1708.06733"}
+{"question": "How can an attacker with no access to the model or training set implant a backdoor using a blended trigger pattern and a small number of poisoned samples?", "source": "1712.05526"}
+{"question": "How do correctly labeled poison images crafted by feature collision cause a single chosen test image to be misclassified after transfer learning?", "source": "1804.00792"}
+{"question": "How can backdoor poisons keep their correct labels by being made hard to classify with adversarial perturbations or GAN latent interpolation?", "source": "1912.02771"}
+{"question": "How can a subtle geometric warping of the image serve as an imperceptible backdoor trigger, and what is the noise mode used during training?", "source": "2102.10369"}
+{"question": "How can a patch trigger be hidden inside correctly labeled poisoned images during training and only revealed at arbitrary locations at test time?", "source": "1910.00033"}
+{"question": "How does matching the gradients of poisoned samples to an adversarial target gradient enable clean-label poisoning of models trained from scratch at ImageNet scale?", "source": "2009.02276"}
+{"question": "How can an attacker poison web-scale datasets by buying expired domains or by timing malicious edits just before a Wikipedia snapshot?", "source": "2302.10149"}
+{"question": "How can pasting a trigger patch into a small fraction of unlabeled images backdoor models trained with MoCo or BYOL?", "source": "2105.10123"}
+{"question": "Under consistent, realistic evaluation conditions, how well do published poisoning attacks hold up, especially against models trained from scratch?", "source": "2006.12557"}
+{"question": "Which methods detect whether an entire trained model is backdoored by querying it with learned inputs and feeding its outputs to a meta-classifier?", "source": ["1906.10842", "1910.03137"]}
+{"question": "Which input-level detectors identify trigger-carrying test inputs by checking how consistent the model's predictions stay when the input is perturbed?", "source": ["1902.06531", "2302.03251"]}
+{"question": "How do surveys of the field categorize threats to training data into poisoning attacks, backdoor attacks and their defenses?", "source": ["2012.10544", "2007.08745"]}
